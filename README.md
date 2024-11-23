@@ -1,6 +1,8 @@
 WatchWorld - Shop Watches
 A Flask-based web application that allows users to browse watches, place orders, and choose between payment methods (Mpesa or Cash on Delivery). The app is deployed on PythonAnywhere and uses MongoDB Atlas for storing and managing order data.
 
+Video on local deployment illustration: https://youtu.be/7_PXsASn3Lo?si=13W3GfjVd3rZGyM3
+
 Features
 Product Listings: Displays a collection of luxury and modern watches.
 Order Placement: Users can place orders by filling out a form.
