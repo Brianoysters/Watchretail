@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <link rel="icon" href="{{ url_for('static', filename='logo.webp') }}" type="image/webp">
+    <title>Admin Orders</title>
+</head>
+<body class="admin-page">
+    <h2>Admin - Manage Orders</h2>
+    <table class="orders-table">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Watch Name</th>
+                <th>Price</th>
+                <th>Status</th>
+                <th>Update Status</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for order in orders %}
+            <tr>
+                <td>{{ order['name'] }}</td>
+                <td>{{ order['email'] }}</td>
+                <td>{{ order['watch_name'] }}</td>
+                <td>${{ order['price'] }}</td>
+                <td>{{ order['status'] }}</td>
+                <td>
+                    <form method="POST" action="{{ url_for('update_order') }}" class="status-form">
+                        <input type="hidden" name="email" value="{{ order['email'] }}">
+                        <select name="status">
+                            <option value="Pending" {% if order['status'] == 'Pending' %}selected{% endif %}>Pending</option>
+                            <option value="Delivered" {% if order['status'] == 'Delivered' %}selected{% endif %}>Delivered</option>
+                        </select>
+                        <button type="submit">Update</button>
+                    </form>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>

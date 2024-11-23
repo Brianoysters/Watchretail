@@ -1,0 +1,498 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    margin: 0;
+    font-size: 24px;
+    background-color: #000; /* Fallback for unsupported gradients */
+}
+
+.wrapper {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url('https://codetheworld.io/wp-content/uploads/2024/09/bg-1.jpeg') no-repeat center center/cover;
+    animation: anim 2.5s linear infinite;
+}
+
+@keyframes anim {
+    100% {
+        filter: hue-rotate(360deg);
+    }
+}
+
+.login-box {
+    width: 90%;
+    max-width: 550px;
+    padding: 20px;
+    border-radius: 15px;
+    border: 3px solid rgba(255, 255, 255, 0.5);
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    backdrop-filter: blur(15px);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.login-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.5);
+}
+
+form {
+    width: 100%;
+}
+
+h2 {
+    font-size: 2em;
+    color: #fff;
+    text-align: center;
+    margin: 24px 0;
+}
+
+p {
+    font-size: 1.2em;
+    color: aqua;
+    text-align: center;
+}
+
+.input-box {
+    width: 100%;
+    margin: 24px 0;
+    position: relative;
+    border-bottom: 1px solid #fff;
+}
+
+.input-box input {
+    width: 100%;
+    height: 50px;
+    background: transparent;
+    color: #fff;
+    border: none;
+    outline: none;
+    font-size: 1em;
+    padding: 0 35px 0 5px;
+}
+
+.input-box label {
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    font-size: 1em;
+    pointer-events: none;
+    transition: 0.5s;
+}
+
+.input-box input:focus + label,
+.input-box input:valid + label {
+    top: -10px;
+    font-size: 0.85em;
+    color: #ff9800;
+}
+
+.input-box .icon {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    color: #fff;
+    transform: translateY(-50%);
+}
+
+.remember-forgot {
+    margin: 16px 0 32px 0;
+    font-size: 0.9em;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.remember-forgot label {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.remember-forgot input {
+    transform: scale(1.2);
+    cursor: pointer;
+}
+
+.remember-forgot a {
+    color: #ff9800;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.remember-forgot a:hover {
+    color: #fff;
+    text-decoration: underline;
+}
+
+.action-buttons {
+    margin-top: 20px;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+.action-buttons .btn {
+    width: auto;
+    padding: 10px 20px;
+    background-color: #ff9800;
+    border: none;
+    border-radius: 30px;
+    color: white;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-decoration: none;
+}
+
+.action-buttons .btn:hover {
+    background-color: #ffa726;
+    transform: scale(1.05);
+}
+
+.action-buttons .btn:active {
+    transform: scale(0.95);
+}
+
+.register-link {
+    font-size: 0.9em;
+    color: #fff;
+    text-align: center;
+    margin-top: 15px;
+}
+
+.register-link p a {
+    color: #ff9800;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+.register-link p a:hover {
+    color: #fff;
+}
+
+/* General Styles */
+body.index-page {
+    background: linear-gradient(135deg, #002244, #00509e);
+    color: #ffffff;
+}
+
+body.index-page .login-box h2 {
+    color: #ffcc00; /* Professional accent color for headers */
+}
+
+body.index-page .login-box p {
+    font-size: 1.1em;
+    color: #f2f2f2;
+    margin-bottom: 20px;
+}
+
+/* Watch List Styling */
+body.index-page .watch-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+body.index-page .watch-item {
+    width: 200px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+body.index-page .watch-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5);
+}
+
+body.index-page .watch-item img {
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+body.index-page .watch-item h3 {
+    color: #ffcc00;
+    margin-bottom: 10px;
+}
+
+body.index-page .watch-item p {
+    color: #ffffff;
+}
+
+body.index-page .watch-item button {
+    padding: 10px 20px;
+    background-color: #ffcc00;
+    color: #002244;
+    border: none;
+    border-radius: 20px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+body.index-page .watch-item button:hover {
+    background-color: #ffd633;
+}
+
+.watch-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+/* Order Form Styling */
+body.index-page .order-form {
+    background: rgba(0, 0, 0, 0.9);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5);
+}
+
+body.index-page .order-form h3 {
+    color: #ffcc00;
+    margin-bottom: 20px;
+}
+
+body.index-page .order-form .input-box {
+    margin-bottom: 15px;
+}
+
+body.index-page .order-form .input-box label {
+    color: #ffffff;
+}
+
+body.index-page .order-form .input-box input {
+    background: rgba(255, 255, 255, 0.1);
+    color: #ffffff;
+    padding: 10px;
+    border: 1px solid #555555;
+    border-radius: 5px;
+}
+
+body.index-page .order-form button {
+    background-color: #ffcc00;
+    color: #002244;
+    border: none;
+    border-radius: 20px;
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+body.index-page .order-form button:hover {
+    background-color: #ffd633;
+}
+
+/* General Admin Page Styles */
+body.admin-page {
+    background: linear-gradient(135deg, #002244, #00509e);
+    color: #ffffff;
+    font-family: 'Montserrat', sans-serif;
+    padding: 20px;
+    margin: 0;
+}
+
+/* Header */
+body.admin-page h2 {
+    font-size: 2.5em;
+    color: #ffcc00;
+    text-align: center;
+    margin-bottom: 30px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+/* Table Styles */
+body.admin-page .orders-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0 auto;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+body.admin-page .orders-table thead {
+    background-color: #00509e;
+}
+
+body.admin-page .orders-table th,
+body.admin-page .orders-table td {
+    padding: 15px 10px;
+    text-align: center;
+    font-size: 1em;
+    color: #ffffff;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+body.admin-page .orders-table th {
+    font-size: 1.2em;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+body.admin-page .orders-table tr:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Status Form */
+body.admin-page .status-form {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+body.admin-page .status-form select {
+    padding: 5px;
+    border: 1px solid #555555;
+    border-radius: 5px;
+    background: #ffffff;
+    color: #002244;
+    font-size: 1em;
+    cursor: pointer;
+}
+
+body.admin-page .status-form select:focus {
+    outline: none;
+    border-color: #ffcc00;
+}
+
+body.admin-page .status-form button {
+    padding: 5px 15px;
+    background-color: #ffcc00;
+    color: #002244;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+body.admin-page .status-form button:hover {
+    background-color: #ffd633;
+}
+
+/* Form Labels */
+body.index-page .order-form .input-box {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+body.index-page .order-form label {
+    display: block; /* Force label to take its own line */
+    font-size: 1em; /* Adjust font size for labels */
+    color: #ffffff;
+    margin-bottom: 5px; /* Space between label and input */
+}
+
+body.index-page .order-form input,
+body.index-page .order-form select {
+    display: block;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.1);
+    color: #ffffff;
+    padding: 10px;
+    border: 1px solid #555555;
+    border-radius: 5px;
+    margin-top: 5px;
+}
+
+body.index-page .order-form input:focus,
+body.index-page .order-form select:focus {
+    outline: none;
+    border-color: #ffcc00; /* Highlighted border on focus */
+}
+/* Hide Labels Visually but Keep Accessible */
+.visually-hidden {
+    position: absolute;
+    clip: rect(1px, 1px, 1px, 1px);
+    clip-path: inset(50%);
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+/* Footer Section */
+.footer {
+    background-color: #002244;
+    color: #ffffff;
+    padding: 20px 50px;
+    margin-top: 30px;
+    text-align: center;
+}
+
+.footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+    text-align: left;
+}
+
+.footer-content div {
+    flex: 1 1 200px;
+    margin: 10px;
+}
+
+.footer-content h4 {
+    font-size: 1.5em; /* Larger size for section titles */
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #ffcc00;
+    text-transform: uppercase;
+}
+
+.footer-content ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-content ul li {
+    font-size: 1em; /* Slightly smaller for list items */
+    margin-bottom: 5px;
+    line-height: 1.6;
+}
+
+.footer-content ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1em;
+    transition: color 0.3s ease;
+}
+
+.footer-content ul li a:hover {
+    color: #ffcc00;
+}
+
+.footer-content p {
+    font-size: 1em; /* Professional paragraph size */
+    margin: 0;
+    line-height: 1.6;
+}
+

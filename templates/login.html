@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <link rel="icon" href="{{ url_for('static', filename='logo.webp') }}" type="image/webp">
+    <title>Log in page</title>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="login-box">
+            <form method="POST" action="/login">
+                <h2>Login</h2>
+                <div class="input-box">
+                    <span class="icon">
+                        <i class="fa-solid fa-user"></i>
+                    </span>
+                    <input type="text" name="username" required>
+                    <label>Username</label>
+                </div>
+                <div class="input-box">
+                    <span class="icon">
+                        <i class="fa-solid fa-user"></i>
+                    </span>
+                    <input type="password" name="password" required>
+                    <label>Password</label>
+                </div>
+                <div class="remember-forgot">
+                    <label><input type="checkbox"> Remember me</label>
+                    <a href="/forgot_password">Forgot Password</a>
+                </div>
+                <button type="submit">Log In</button>
+                <div class="register-link">
+                    <p>Don't have an account? <a href="/signup">Sign Up</a></p>
+                </div>
+                {% if error %}
+                <p style="color: red; text-align: center;">{{ error }}</p>
+                {% endif %}
+            </form>
+        </div>
+    </div>
+</body>
+</html>
