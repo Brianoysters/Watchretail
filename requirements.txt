@@ -10,7 +10,6 @@ click==8.1.7
 click-plugins==1.1.1
 cligj==0.7.2
 colorama==0.4.3
-command-not-found==0.3
 configobj==5.0.6
 constantly==15.1.0
 contourpy==1.1.1
